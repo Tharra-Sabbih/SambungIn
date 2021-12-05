@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SambungIn </title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body th:style="'background: url(/images/bg.png) no-repeat center center fixed;'">
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="d-flex justify-content-center">
+
+    <div class="d-flex justify-content-center">
+        <div class="m-4">
+            <br><br><br><br><br>
+            <div class="card bg-info" style="
+                border-radius: 15px;
+                /*height: 180px;*/
+                width: 800px;
+                margin: auto;">
+                <div class="card-body text-light">
+                    <br><br>
+                    <h1 style="text-align:center;" th:text=" 'Hai ' + ${tkn.nama} + ' !'"></h1>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <a th:href="@{/{token}/viewall-pesan(token = ${tkn.token})}" class="mx-2 btn btn-light">Pesan dari KsaTiara</a>
+                        <a th:href="@{/{token}/kirim-pesan(token = ${tkn.token})}" class="mx-2 btn btn-light">Kirim Pesan</a>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <br>
+    <br>
+    <div th:replace="fragments/fragment :: footer"></div>
+</div>
+</body>
+
+</html>

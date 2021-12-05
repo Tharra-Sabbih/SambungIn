@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SambungIn </title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="d-flex justify-content-center">
+    <div class="m-4">
+        <br><br><br>
+        <h5 style="text-align:center;" th:text="${respon}"></h5>
+        <div class="card bg-info" style="
+                border-radius: 15px;
+                /*height: 180px;*/
+                width: 500px;
+                margin: auto;">
+            <div class="card-body text-light">
+                <br>
+                <h3 style="text-align:center;">Add New Token</h3>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <form th:action="@{/private-add-token/fn6pYiSj5PUaI3eCB0Wt}" th:object="${token}" method="POST">
+                        <label>Token</label>
+                        <input class="form-control" name="token"/>
+                        <br>
+                        <label>Nama</label>
+                        <input class="form-control" name="nama"/>
+                        <button class="btn btn-dark text-light" style="float: right;font-weight: bold;" type="submit"><strong>Add</strong></button>
+                        <br><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+</div>
+<div class="container">
+    <br>
+    <br>
+    <div th:replace="fragments/fragment :: footer"></div>
+</div>
+</body>
+
+</html>

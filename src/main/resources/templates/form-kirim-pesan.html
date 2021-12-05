@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SambungIn </title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="d-flex justify-content-center">
+    <div class="m-4">
+        <br><br><br>
+        <h5 style="text-align:center;" th:text="${respon}"></h5>
+        <div class="card bg-info" style="
+                border-radius: 15px;
+                /*height: 180px;*/
+                width: 500px;
+                margin: auto;">
+            <div class="card-body text-light">
+                <br>
+                <h3 style="text-align:center;">Kirim pesan-pesan <br>buat temen-temen KSATIARA yuk!</h3>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <form th:action="@{/{token}/kirim-pesan(token = ${token})}" th:object="${pesan}" method="POST">
+                        <input hidden class="form-control" name="pengirim" th:value="${pengirim.id}"/>
+                        <label>Buat siapa tuh?</label>
+                        <select class="form-control" name="penerima">
+                            <option selected>-- Dipilih dipilih --</option>
+                            <option th:each="penerima : ${listPenerima}"
+                                    th:value="${penerima.id}"
+                                    th:text="${penerima.nama}" name="penerima"></option>
+                        </select>
+                        <br>
+                        <label>Tulis pesannya disini yaa!</label>
+                        <textarea required class="form-control" type="text" name="pesan" style="width: 350px; height: 250px;"></textarea>
+                        <br>
+                        <a th:href="@{/{token}/viewall-pesan(token = ${token})}" class="mx-2 btn btn-light">Pesan dari Ksatiara</a>
+                        <button class="btn btn-dark text-light" style="float: right;font-weight: bold;" type="submit"><strong>Kirim!</strong></button>
+                        <br><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <div th:replace="fragments/fragment :: footer"></div>
+</div>
+</body>
+
+</html>

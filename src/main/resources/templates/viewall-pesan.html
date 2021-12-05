@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SambungIn </title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="container">
+<div class="d-flex justify-content-center">
+    <div class="m-4">
+        <br><br><br>
+        <h3 style="text-align:center;" th:text=" 'Hai ' + ${penerima.nama} + ' !👋🏻👋🏻'"></h3>
+        <br>
+        <h5 style="text-align:center;">Baca pesan-pesan <br>dari temen-temen Ksatiara buat kamu yuk!</h5>
+        <br>
+        <a th:href="@{/{token}/kirim-pesan(token = ${penerima.token})}" style="align-content: center" class="mx-2 btn btn-info">Kirim Pesan</a>
+        <br><br>
+        <div class="row">
+            <div th:each="pesan, iterationStatus : ${listPesan}" class="card-group d-flex justify-content-around flex-wrap pb-4">
+                <div class="col">
+                    <div class="card text-white bg-info mt-5" style="width: 500px;">
+                        <div class="card-header" style="font-weight: bold;" th:text="${pesan.pengirim.nama}"></div>
+                        <div class="card-body" style="color: white">
+                            <p class="card-text" style="text-emphasis-color: #1b1e21" th:text="${pesan.pesan}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+    </div>
+</div>
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <div th:replace="fragments/fragment :: footer"></div>
+</div>
+</body>
+
+</html>

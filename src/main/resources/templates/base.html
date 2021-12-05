@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title> SambungIn </title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col">
+            <br>
+            <h3 class="text-info">Hi, Welcome to SambungIn!</h3>
+            <br>
+            <form th:action="@{/user/{token}(token=${token})}" method="GET" style="width: 310px;">
+                <label><h5 class="text-dark">Enter your secret code first:</h5></label>
+                <input required class="form-control alert-info" style="width: 300px;" type="text" name="token" placeholder="Secret code..."/>
+                <p class="text-info">*Secret Code is available for KsaTiara only</p>
+                <button class="mx-2 btn text-light text-right bg-info" style="float:right;" type="submit">LET'S GO!</button>
+            </form>
+        </div>
+        <div class="col">
+            <img th:src="@{/images/ramefix.jpg}" style="width: 130%;">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col">
+            <img th:src="@{/images/yamet.png}" style="width: 100%;">
+        </div>
+        <div class="col">
+            <br><br>
+            <h3 class="text-info">Apa itu SambungIn?</h3>
+            <h3 class="text-info"></h3>
+            <p>Sambung lagi Ikatannya :D !</p>
+            <p>Platform SambungIn merupakan wadah eksklusif bagi KsaTiara RK Jakarta angkatan X untuk saling menyampaikan pesan, afirmasi, afeksi, hingga kritisi secara anonymus maupun tidak. Petunjuk selengkapnya dapat dilihat pada section FAQ di akhir halaman.</p>
+        </div>
+    </div>
+</div>
+    <br><br><br><br>
+    <div class="row justify-content-center">
+
+        <div class="container">
+            <br><br>
+            <div class="row">
+                <br>
+                <div class="col">
+                    <br><br>
+                    <h3 class="text-info">Platform ini dikembangkan oleh Tharra, seorang mahasiswa tertekan, yang didedikasikan khusus untuk sobi sobi erkaa jekardahh sekalian~</h3>
+                    <p>Haaeeee!!</p>
+                    <p>Disclaimer duluuu, project ini impulsive bgt lol, maaf yaaa kalo alakadarnya dan ga rapih dan ga bagus. Special thanks buat RANI yang bantu ngedata, AIS yang bantu ngumpulin foto ksat, dan MUDRIK yang nyariin foto sisanya. Tidak lupa juga terimakasih kpd kemndikbud + melati yang memperbolehkan sy mncury foto mapres. Tanpa kalian project roro jongrang ini tdk akan jd T_T <br> *cryin in tears </p>
+                    <p>SEMOGA BERMANFAAT AJADEHHH <3 </p>
+                    <p>Nah lanjutt, sekarang saatnya untuk... </p>
+
+                </div>
+                <div class="col"><img class="mx-auto d-block border border-info" th:src="@{/images/tharra.png}" style="width:50%;border-radius: 10px;"></div>
+            </div>
+            <br><br>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 class="text-info" style="text-align: center;">😍 Kenalan yuk, ini keluarga KsaTiara X! 😍</h1>
+        <br><br><br><br>
+        <p class="text-dark" style="text-align: center;">Walaupun memiliki makara yang berbeda-beda, namun kita semua berasal dari satu stasiun yang sama, yaitu Stasiun UI tercinta!</p>
+
+        <br><br><br><br><br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/bangkabs.jpeg}" style="width:70%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Bang Kabul</h5>
+                    <p class="text-dark" style="text-align: center;">Ayah?</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/kamute.jpeg}" style="width:40%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ka Mute</h5>
+                    <p class="text-dark" style="text-align: center;">Bunda?</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/rani.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Rani</h5>
+                    <p class="text-dark" style="text-align: center;">Anak psikologi nih!</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/aissss.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ais</h5>
+                    <p class="text-dark" style="text-align: center;">Si kaifa dari niaga</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/nasya.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Nasya</h5>
+                    <p class="text-dark" style="text-align: center;">Si kesos yang paling women</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/farras.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Farras</h5>
+                    <p class="text-dark" style="text-align: center;">SI</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/bening.jpg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Bening</h5>
+                    <p class="text-dark" style="text-align: center;">Si pecinta lingkungan dari teknik!</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/andhika.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Andhika</h5>
+                    <p class="text-dark" style="text-align: center;">ilmu komputer</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/clara.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Clara</h5>
+                    <p class="text-dark" style="text-align: center;">Yang ngejamin kesehatan masyarakatt nih!</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/mudrik.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Mudrik</h5>
+                    <p class="text-dark" style="text-align: center;">SI</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/alda.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Alda</h5>
+                    <p class="text-dark" style="text-align: center;">Prmisi perawat mo lewat</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/yudho.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Yudho</h5>
+                    <p class="text-dark" style="text-align: center;">fisika</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/ria.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ria</h5>
+                    <p class="text-dark" style="text-align: center;">tertakut ketinggalan 😲</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/robiq.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Robiq</h5>
+                    <p class="text-dark" style="text-align: center;">kimia</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/maureen.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Maureen</h5>
+                    <p class="text-dark" style="text-align: center;">Kesos yang paling peduli anak!</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/fadly.png}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Fadly</h5>
+                    <p class="text-dark" style="text-align: center;">ekis</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/vina.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Vina</h5>
+                    <p class="text-dark" style="text-align: center;">Sy anak ekonomi</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/rafi.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Rafi</h5>
+                    <p class="text-dark" style="text-align: center;">fiskal</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/sasa.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Sasa</h5>
+                    <p class="text-dark" style="text-align: center;">cuannya islam</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/malik.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Malik</h5>
+                    <p class="text-dark" style="text-align: center;">kesos</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/ebi.jpg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ebi</h5>
+                    <p class="text-dark" style="text-align: center;">kesmas</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/bayu.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Bayu</h5>
+                    <p class="text-dark" style="text-align: center;">sipil</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/nurul.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Nurul</h5>
+                    <p class="text-dark" style="text-align: center;">fisika</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/aghfal.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Aghfal</h5>
+                    <p class="text-dark" style="text-align: center;">kriminologi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/nine.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Nine</h5>
+                    <p class="text-dark" style="text-align: center;">ekis</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/julpii.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Julpi</h5>
+                    <p class="text-dark" style="text-align: center;">ekis</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/sendy.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Sendy</h5>
+                    <p class="text-dark" style="text-align: center;">sastra belanda</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/akang.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Akang</h5>
+                    <p class="text-dark" style="text-align: center;">geofisika</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/tisa.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Tisa</h5>
+                    <p class="text-dark" style="text-align: center;">kesmas</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/azami.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Azami</h5>
+                    <p class="text-dark" style="text-align: center;">niaga</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/reka.jpg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Reka</h5>
+                    <p class="text-dark" style="text-align: center;">arkeologi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/owo.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Owo</h5>
+                    <p class="text-dark" style="text-align: center;">metal</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/fira.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Fira</h5>
+                    <p class="text-dark" style="text-align: center;">sosiologi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/rama.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Rama</h5>
+                    <p class="text-dark" style="text-align: center;">mesin</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/tazki.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Tazki</h5>
+                    <p class="text-dark" style="text-align: center;">dokter gigi</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/dimas.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Dimas</h5>
+                    <p class="text-dark" style="text-align: center;">fisika</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/ida.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ida</h5>
+                    <p class="text-dark" style="text-align: center;">sosiologi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/apis.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Apis</h5>
+                    <p class="text-dark" style="text-align: center;">ilmu ekonomi</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/alya.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Alya</h5>
+                    <p class="text-dark" style="text-align: center;">keperawatan</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/bagus.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Bagus</h5>
+                    <p class="text-dark" style="text-align: center;">adm negara</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/indah.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Indah</h5>
+                    <p class="text-dark" style="text-align: center;">kesehatan lingkungan</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/ipul.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ipul</h5>
+                    <p class="text-dark" style="text-align: center;">ilmu ekonom</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/saf.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Safira</h5>
+                    <p class="text-dark" style="text-align: center;">kesmas</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/farid.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Farid</h5>
+                    <p class="text-dark" style="text-align: center;">teknik komputer</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/has.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Has</h5>
+                    <p class="text-dark" style="text-align: center;">akuntansi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/harun.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Harun</h5>
+                    <p class="text-dark" style="text-align: center;">kesmas</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/dian.jpg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Dian</h5>
+                    <p class="text-dark" style="text-align: center;">ilpus</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/akif.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Akif</h5>
+                    <p class="text-dark" style="text-align: center;">metal</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/nisah.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Nisah</h5>
+                    <p class="text-dark" style="text-align: center;">ekis</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/rofiq.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Rofiq</h5>
+                    <p class="text-dark" style="text-align: center;">ilmu ekonom</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/gita.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Gita</h5>
+                    <p class="text-dark" style="text-align: center;">hukum</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/ocid.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Ocid</h5>
+                    <p class="text-dark" style="text-align: center;">antropologi sosial</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/rini.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Rini</h5>
+                    <p class="text-dark" style="text-align: center;">ilmu ekonomi</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/surur.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Surur</h5>
+                    <p class="text-dark" style="text-align: center;">farmasi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/sheila.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Sheila</h5>
+                    <p class="text-dark" style="text-align: center;">manajemen</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/joe.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Joe</h5>
+                    <p class="text-dark" style="text-align: center;">sipil</p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/andini.jpg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">andini</h5>
+                    <p class="text-dark" style="text-align: center;">psikologi</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/robby.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Robby</h5>
+                    <p class="text-dark" style="text-align: center;">manajemen</p>
+                </div>
+                <div class="col">
+                    <img class="mx-auto d-block border border-info" th:src="@{/images/sabila.jpeg}" style="width:50%;border-radius: 10px;">
+                    <br>
+                    <h5 class="text-info" style="text-align: center;">Sabila</h5>
+                    <p class="text-dark" style="text-align: center;">SI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <h3 class="text-info" style="text-align:center">Frequently Asked Question!</h3>
+    <br><br>
+    <div class="row justify-content-center">
+        <div class="container">
+            <div class="card-deck">
+                <div class="card border-info">
+                <div class="card-header">Token</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Bagaimana caranya mendapatkan Secret Code?</h5>
+                    <p class="card-text">Karena Secret Code merupakan Token dan bersifat personal, maka penulis tidak bisa memberikannya secara publik. Silahkan PC Tharra Sabbih (kontak ada di grup regional) untuk meminta tokenmu agar dapat mengakses fitur berinteraksi dengan KsaTiara!</p>
+                </div>
+                </div>
+                <div class="card border-info">
+                <div class="card-header">Token</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Apakah Token ini bersifat permanent atau temporary?</h5>
+                    <p class="card-text">Token bersifat permanent. Setiap anggota keluarga KsaTiara memiliki satu token yang tetap dan tidak berubah-ubah.</p>
+                </div>
+                </div>
+                <div class="card border-info">
+                <div class="card-header">Token</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Apakah Tokenku bersifat rahasia?</h5>
+                    <p class="card-text">Ya. Ibarat akun sebagai identitas, Token di SambungIn juga digunakan untuk memastikan bahwa kamu adalah kamu XD !</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row justify-content-center">
+        <div class="container">
+            <div class="card-deck">
+                <div class="card border-info">
+                <div class="card-header">Pesan</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Bagaimana caranya mendapatkan Secret Code?</h5>
+                    <p class="card-text">Karena Secret Code merupakan Token dan bersifat personal, maka penulis tidak bisa memberikannya secara publik. Silahkan PC Tharra Sabbih (kontak ada di grup regional) untuk meminta tokenmu agar dapat mengakses fitur berinteraksi dengan KsaTiara!</p>
+                </div>
+                </div>
+                <div class="card border-info">
+                <div class="card-header">Pesan</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Apakah Token ini bersifat permanent atau temporary?</h5>
+                    <p class="card-text">Token bersifat permanent. Setiap anggota keluarga KsaTiara memiliki satu token yang tetap dan tidak berubah-ubah.</p>
+                </div>
+                </div>
+                <div class="card border-info">
+                <div class="card-header">Pesan</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Apakah Tokenku bersifat rahasia?</h5>
+                    <p class="card-text">Ya. Ibarat akun sebagai identitas, Token di SambungIn juga digunakan untuk memastikan bahwa kamu adalah kamu XD !</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <div th:replace="fragments/fragment :: footer"></div>
+</div>
+</body>
+
+</html>
